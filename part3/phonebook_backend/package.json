@@ -1,0 +1,12 @@
+{
+  "name": "phonebook_backend",
+  "version": "1.0.0",
+  "description": "Starts at part 3a of the Fullstack Open course",
+  "main": "index.js",
+  "scripts": {
+	"start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafael Burgos",
+  "license": "ISC"
+}
