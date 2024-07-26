@@ -7,13 +7,14 @@
     "dev": "nodemon index.js",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-	"build:ui": "rm -rf dist && cd ../The_Phonebook && npm install && npm run build && cp -r dist ../phonebook_backend",
+    "build:ui": "rm -rf dist && cd ../The_Phonebook && npm install && npm run build && cp -r dist ../phonebook_backend",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "Rafael Burgos",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+    "mongoose": "^8.5.1",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.4"
   }

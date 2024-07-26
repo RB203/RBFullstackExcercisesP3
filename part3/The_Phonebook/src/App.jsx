@@ -79,10 +79,13 @@ const App = () => {
       setPersons(persons.concat(response))
       setNewName('')
       setNewNumber('')
+      setStatus(['Added '+newName,true])
+      setTimeout(() => {setStatus([null,null])},5000)
+    }).catch(error => {
+      setStatus(['Error during addition of'+newName,false])
+      setTimeout(() => {setStatus([null,null])},5000)
     })
 
-    setStatus(['Added '+newName,true])
-    setTimeout(() => {setStatus([null,null])},5000)
 
   }
   
