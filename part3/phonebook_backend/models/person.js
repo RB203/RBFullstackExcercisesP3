@@ -30,18 +30,18 @@ const personSchema = new mongoose.Schema({
         let start = 0
         if(/\b\d{2}-\d/.test(element)){
           start = 2
-          console.log("first")  
+          console.log('first')
         }else if(/\b\d{3}-\d/.test(element)){
           start = 3
-          console.log("second")  
+          console.log('second')
         }else{
-          console.log("none")  
+          console.log('none')
           return false
         }
         const remaining = letters - start - 1
         let regex = new RegExp(`\\b\\d{${start}}-\\d{${remaining}}\\b`, 'i')
-        console.log(regex)        
-        console.log(regex.test(element))        
+        console.log(regex)
+        console.log(regex.test(element))
         return regex.test(element)
       },
       message: props => `Number ${props.value} incorrect.`
